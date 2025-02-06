@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mau nanyaa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffe5e5;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+        .tenor-gif-embed {
+            margin-top: 10px;
+        }
+
+        .message-box {
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+
+        textarea {
+            width: 100%;
+            height: 80px;
+            border-radius: 5px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            resize: none;
+            font-size: 14px;
+        }
+
+        .send-button {
+            text-decoration: none;
+            background: #ff4d4d;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .send-button:hover {
+            background: #e60000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Yeeeyy its approved</h1>
+        <p>Makasiii cantiikk</p>
+        <p>I know u love me toooo</p>
+        <p>I love u more than anything</p>
+        <div class="tenor-gif-embed" data-postid="18656241" data-share-method="host" data-aspect-ratio="1" data-width="100%">
+            <a href="https://tenor.com/view/sunny-sunnykosh-gif-18656241">Sunny Sunnykosh Sticker</a>
+            from <a href="https://tenor.com/search/sunny-stickers">Sunny Stickers</a>
+        </div>
+        <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+        <div class="message-box">
+            <textarea id="message" placeholder="Tulis pesanmu di sini..."></textarea>
+            <button class="send-button" onclick="sendMessage()">Kirim ke WhatsApp</button>
+        </div>
+    </div>
+
+    <script>
+        function sendMessage() {
+            var message = document.getElementById("message").value;
+            var phoneNumber = "6289508611774"; // Ganti dengan nomor WhatsApp kamu
+
+            if (message.trim() === "") {
+                alert("Tulis pesan dulu yaa~");
+                return;
+            }
+
+            var whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappURL, "_blank");
+        }
+    </script>
+</body>
+</html>
